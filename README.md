@@ -1,0 +1,1 @@
+This repository includes small projects for practice 
