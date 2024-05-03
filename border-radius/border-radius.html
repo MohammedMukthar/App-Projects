@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="border-radius.css">
+    <title>Border Radius</title>
+</head>
+<body>
+    <a href="../index.html">Main Menu</a>
+
+    <div class="container">
+        <div class="border-container">
+
+        </div>
+        <div class="slider-container">
+            <div class="left-section">
+                <label for="top-left">Top Left</label>
+                <input type="range" name="top-left" class="top-left" min="1" max="500" value="1">
+                <label for="bottom-left">Bottom Left</label>
+                <input type="range" name="bottom-left" min="1" class="bottom-left" max="500" value="1">
+            </div>
+            <div class="right-section">
+                <label for="top-right">Top Right</label>
+                <input type="range" name="top-right" min="1" max="500" class="top-right"  value="1">
+                <label for="bottom-right">Bottom Right</label>
+                <input type="range" name="bottom-right" min="1" max="500" class="bottom-right" value="1">
+            </div>
+        </div>
+        <div class="css-container">
+            <p>
+                {    border-radius: <span id="result-css"></span> } 
+            </p>
+        </div>
+    </div>
+    <script>
+        const borderBox = document.querySelector('.border-container')
+        const resultCss = document.getElementById('result-css')
+        const topLeftBorder = document.querySelector('.top-left')
+        const topRightBorder = document.querySelector('.top-right')
+        const bottomLeftBorder = document.querySelector('.bottom-left')
+        const bottomRightBorder = document.querySelector('.bottom-right')
+        topLeftBorder.addEventListener('input', (event) => {
+            borderBox.style.borderTopLeftRadius = event.target.value + 'px'
+            resultCss.innerHTML = borderBox.style.borderTopLeftRadius + ', ' + borderBox.style.borderTopRightRadius + ', ' + borderBox.style.borderBottomRightRadius + ', ' + borderBox.style.borderBottomLeftRadius 
+
+        })
+        topRightBorder.addEventListener('input', (event) => {
+            borderBox.style.borderTopRightRadius = event.target.value + 'px'
+            resultCss.innerHTML = borderBox.style.borderTopLeftRadius + ', ' + borderBox.style.borderTopRightRadius + ', ' + borderBox.style.borderBottomRightRadius + ', ' + borderBox.style.borderBottomLeftRadius 
+
+        })
+        bottomLeftBorder.addEventListener('input', (event) => {
+            borderBox.style.borderBottomLeftRadius = event.target.value + 'px'
+            resultCss.innerHTML = borderBox.style.borderTopLeftRadius + ', ' + borderBox.style.borderTopRightRadius + ', ' + borderBox.style.borderBottomRightRadius + ', ' + borderBox.style.borderBottomLeftRadius 
+
+        })
+        bottomRightBorder.addEventListener('input', (event) => {
+            borderBox.style.borderBottomRightRadius = event.target.value + 'px'
+            resultCss.innerHTML = borderBox.style.borderTopLeftRadius + ', ' + borderBox.style.borderTopRightRadius + ', ' + borderBox.style.borderBottomRightRadius + ', ' + borderBox.style.borderBottomLeftRadius 
+
+        })
+
+    </script>
+</body>
+</html>

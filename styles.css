@@ -1,0 +1,24 @@
+body{
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+.table-contents{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    width: 20%;
+}
+
+.content-item{
+    text-decoration:  none;
+    font-size: medium;
+    font-weight: 500;
+    padding: 12px;
+    border-bottom: 1px solid black;
+}
+
+.content-item:hover {
+    font-size: large;
+    font-weight: 700;
+    text-decoration-line: underline;
+}
